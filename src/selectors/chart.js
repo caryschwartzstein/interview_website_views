@@ -20,18 +20,14 @@ export const groupByLanguage = createSelector(
   [selectData, getSelectedLanguages],
   (data, languages) => {
     // TODO: Implement
-    console.log('function called')
     let languagesObj = {}
     languages.map(l => {
       languagesObj[l.name] = 0 
     })
     data.map((d) => {
-      console.log('mapping over data', d)
       let count = 0
       d.tags.map((t) => {
-        console.log('Tag Name', t.name, languagesObj)
         if (t.name in languagesObj) {
-          console.log('MATCH')
           d.website_views.map(view => {
             count += parseInt(view.count)
           })
@@ -43,7 +39,6 @@ export const groupByLanguage = createSelector(
     for (const [key, value] of Object.entries(languagesObj)) {
       toReturn.push({language: key, views: value})
     }
-    console.log(toReturn)
     return toReturn
   }
 );
