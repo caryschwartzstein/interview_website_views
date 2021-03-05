@@ -18,8 +18,13 @@
 
 /* TODO */
 .header__text {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* TODO */
 .header__label {
+  padding: 10px 20px;
+  border: 1px solid black;
 }

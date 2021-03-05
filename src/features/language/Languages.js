@@ -12,11 +12,16 @@ export function Languages() {
       <div>
         {_.map(languages, language => {
           return (
-            <Checkbox
-              displayed={true}
-              language={language}
-              key={language.name}
-            />
+            <>
+            {
+              (language.name === 'English' || language.name === 'French') &&
+              <Checkbox
+                displayed={true}
+                language={language}
+                key={language.name}
+              />
+            }
+            </>
           );
         })}
       </div>

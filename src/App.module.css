@@ -4,8 +4,16 @@
 
 /* TODO */
 .time_series__header {
+  width: 100%;
+  justify-content: center;
+  margin: 20px;
+  text-align: center;
 }
 
 /* TODO */
 .time_series__chart_row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
 }
